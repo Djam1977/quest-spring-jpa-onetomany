@@ -15,8 +15,8 @@ public class School {
     private String name;
     private Long capacity;
     private String country;
-@oneTomany(mappedBy = "wizard")
-private List<Wizard>wizard;
+    @OneToMany(mappedBy = "school")
+    private List<Wizard> wizards;
     public School() {
     }
 
@@ -50,5 +50,12 @@ private List<Wizard>wizard;
 
     public void setCountry(String country) {
         this.country = country;
+    }
+    public List<Wizard> getWizards() {
+        return wizards;
+    }
+
+    public void setWizards(List<Wizard> wizards) {
+        this.wizards = wizards;
     }
 }
