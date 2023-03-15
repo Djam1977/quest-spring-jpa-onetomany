@@ -18,8 +18,8 @@ public class Wizard {
     private boolean muggle;
 
     @ManyToOne
-    @JoinColumn(firstName = "school_id")
-    private School.school;
+    @JoinColumn(name = "school_id")
+    private School school;
 
     public Wizard() {
     }
